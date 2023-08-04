@@ -10,6 +10,13 @@ It's a better UI when we set the distance of the fixed positioned character's to
 
 The buttons in the scroll bar can reach the edge when we apply a negative margin to move the button row to the left edge, and then **adding that space back** using a left padding of it. The result is that it's still aligned with the title, but now the button (when scrolled) can _go beyond_ the container's padding and reach the edge.
 
+### Avoiding z-index wars
+
+When adding the perspective decoration component, the layering of different sections became complex. A simple solution is that
+
+- a. to avoid in-between z-index values, we can set the CharacterEditor (main) to relative positioning, and now all 3 DOM elements of the page are using positioned layout, enabling stacking context
+- b. then we can use DOM order to direct which to layer on top of which, instead of creating z-index values, which would potentially lead to a z-index war in the future when adding complexities and decrease the reusability of the newly added component.
+
 ---
 
 In this workshop, you'll build a Sims-style character creation screen.

@@ -2,6 +2,13 @@
   padding-top: 128px;
   padding-bottom: 64px;
   width: 100%;
+  /* isolation: isolate; */
+  position: relative;
+  /* wow both work!!! but why!!! */
+
+  /* z-index: 100;*/
+
+  position: relative;
 }
 
 .maxWidthWrapper {

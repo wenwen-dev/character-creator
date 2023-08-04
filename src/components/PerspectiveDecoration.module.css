@@ -1,0 +1,7 @@
+.perspectiveEffects {
+  height: 40%;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: hsl(195deg 20% 86%);
+}
