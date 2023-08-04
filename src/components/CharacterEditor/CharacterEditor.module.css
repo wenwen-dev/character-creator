@@ -36,9 +36,11 @@
   top: 15%;
   /* right: -60px; */
   left: 65%;
+  bottom: 5%;
+  /* Without the bottom set, SVG would disappear because the SVG has height 100%, but this wrapper doesn't have a height. To solve this, we can either give the wrapper a set height or use a bottom anchor to allow height being calculated. */
 
   /* DIGEST: the control column takes up 50%, adding some breathing room, that's 60% from the left - using a scalable and flexible unit */
-  width: 35%;
+  /* width: 35%; */
   /* Without the width the svg disappears */
   min-height: 500px;
 }

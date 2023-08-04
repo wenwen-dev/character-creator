@@ -1,5 +1,17 @@
 # Character Creation Workshop
 
+## My reflections
+
+### Picking units
+
+It's a better UI when we set the distance of the fixed positioned character's top and left anchors, because the distance expands and shrinks with the page, instead of sticking at the same spot when using px units.
+
+### Allowing buttons to reach the edge
+
+The buttons in the scroll bar can reach the edge when we apply a negative margin to move the button row to the left edge, and then **adding that space back** using a left padding of it. The result is that it's still aligned with the title, but now the button (when scrolled) can _go beyond_ the container's padding and reach the edge.
+
+---
+
 In this workshop, you'll build a Sims-style character creation screen.
 
 ## Mockups
@@ -56,11 +68,7 @@ This project uses **CSS Modules**. CSS modules are ultimately very similar to va
 import styles from './Something.module.css';
 
 function Something() {
-  return (
-    <div className={styles.wrapper}>
-      I'll be 500px wide!
-    </div>
-  );
+  return <div className={styles.wrapper}>I'll be 500px wide!</div>;
 }
 ```
 
